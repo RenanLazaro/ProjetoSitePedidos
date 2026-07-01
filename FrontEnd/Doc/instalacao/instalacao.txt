@@ -1,0 +1,29 @@
+Instalação
+
+1. Instalar o Node.js
+O Angular depende do Node.js para funcionar.
+
+Verificando se está instalado:
+node -v --> verificamos a versão do node - dia 01/07/2026 estou rodando com a versão ( v24.18.0 )
+
+Depois:
+npm -v --> aqui instala todas bibliotecas do projeto
+
+
+
+INSTALANDO O ANGULAR NO PROJETO
+npm install -g @angular/cli --> cli vai criar os projeto,componentes,serviços e além de tudo vai executar seu projeto, sem o CLI teriamos que configurar tudo manualmente.
+
+por fim - usamos o comando ng version para verificar a versão do ANGULAR.
+
+
+
+CRIANDO O PROJETO
+ng new NOME DO PROJETO --routing --style=scss --standalone
+
+--routing → cria a configuração de rotas.
+--style=scss → usa SCSS como pré-processador de CSS.
+--standalone → utiliza a arquitetura moderna do Angular, sem NgModules. --> versão moderna do angular.
+
+
+

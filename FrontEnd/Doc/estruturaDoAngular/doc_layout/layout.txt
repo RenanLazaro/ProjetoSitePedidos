@@ -1,0 +1,14 @@
+📂 layout/
+Tudo relacionado à estrutura visual.
+
+layout/
+header/
+sidebar/
+footer/
+admin-layout/
+auth-layout/
+
+Imaginamos um prédio.
+O layout é a estrutura do prédio.
+
+Depois colocamos os móveis (as páginas).

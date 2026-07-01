@@ -1,0 +1,16 @@
+   core/
+Pergunta: Por que existe?
+Porque algumas coisas pertencem ao sistema inteiro.
+
+Exemplos:
+core/
+
+auth/
+guards/
+interceptors/
+services/
+
+Tudo que for global ficará aqui.
+Exemplo:
+Quando o usuário fizer login, todas as telas precisam saber quem é o usuário.
+Então isso pertence ao core.

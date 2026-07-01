@@ -1,0 +1,11 @@
+📂 services/
+Aqui ficarão os serviços responsáveis por conversar com a API.
+
+Por exemplo:
+ProdutoService
+PedidoService
+ClienteService
+
+Esses serviços serão a ponte entre o Angular e o backend.
+
+obs: caso tenha dúvidas, pesquise e documente mais para reforçar!

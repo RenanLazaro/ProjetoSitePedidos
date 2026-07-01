@@ -1,0 +1,20 @@
+📂 models/
+Representam os objetos da aplicação.
+
+Exemplo:
+A API retorna:
+
+{
+  "id": 1,
+  "nome": "Pizza",
+  "preco": 50
+}
+
+Criamos:
+export interface Produto {
+  id: number;
+  nome: string;
+  preco: number;
+}
+
+Assim o TypeScript sabe exatamente quais dados existem.
