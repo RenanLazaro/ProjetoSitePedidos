@@ -1,18 +1,36 @@
 :host {
   display: block;
-  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .login-page {
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to bottom right, #fff7ed, #fefce8);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que o padding não aumente o tamanho do box */
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  overflow-y: auto; /* Permite scroll interno APENAS se o conteúdo for maior que a tela */
+}
+
+/* Garante que o card não tente ocupar mais que o espaço disponível */
+.login-page__content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0; /* Impede que o conteúdo encolha demais */
 }
 
 .login-page__back {
@@ -34,6 +52,7 @@
 
 .back-button:hover {
   background: #fff7ed;
+  color:#d85b34;
 }
 
 .login-page__content {
@@ -59,10 +78,11 @@
 
 .login-page__title {
   margin: 0;
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 35px;
+  font-weight: 750;
   color: #2f1d14;
   text-align: center;
+  font-style: Bold;
 }
 
 .login-page__subtitle {
