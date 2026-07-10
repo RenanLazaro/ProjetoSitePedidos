@@ -1,0 +1,11 @@
+📂 pages/
+Aqui ficam as funcionalidades do sistema.
+
+pages/
+login/
+dashboard/
+produtos/
+pedidos/
+clientes/
+
+Cada pasta representa uma página da aplicação.

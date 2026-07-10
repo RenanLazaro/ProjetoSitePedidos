@@ -1,0 +1,17 @@
+Estrutura do Angular
+
+Depois de criar o projeto, vamos organizar a pasta app.
+
+src/
+└── app/
+    │
+    ├── core/
+    ├── layout/
+    ├── shared/
+    ├── pages/
+    ├── services/
+    ├── models/
+    │
+    ├── app.component.ts
+    ├── app.config.ts
+    └── app.routes.ts

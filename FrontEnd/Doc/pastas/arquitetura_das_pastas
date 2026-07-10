@@ -1,0 +1,84 @@
+O que cada parte vai receber daqui pra frente
+core/
+
+Vai guardar o que é global do app.
+
+Exemplo:
+core/
+  constants/
+    api-endpoints.ts
+    storage-keys.ts
+
+  guards/
+    auth.guard.ts
+
+  interceptors/
+    auth.interceptor.ts
+
+  models/
+    usuario.model.ts
+    produto.model.ts
+    pedido.model.ts
+
+  services/
+    auth.service.ts
+    api.service.ts
+
+  utils/
+    currency.util.ts
+features/admin/
+
+Vai guardar a área administrativa.
+
+Exemplo de crescimento:
+features/admin/
+  pages/
+    login-page/
+    dashboard-page/
+    produtos-page/
+    pedidos-page/
+    categorias-page/
+
+  components/
+    login-form/
+    product-form/
+    order-table/
+
+  services/
+    admin-dashboard.service.ts
+features/client/
+
+Vai guardar a área pública / cliente.
+
+Exemplo:
+features/client/
+  pages/
+    cardapio-page/
+    carrinho-page/
+    checkout-page/
+
+  components/
+    product-card/
+    category-filter/
+    cart-sidebar/
+
+  services/
+    cardapio.service.ts
+    carrinho.service.ts
+shared/
+
+Vai guardar o que pode ser reaproveitado.
+
+Exemplo:
+shared/
+  components/
+    ui-button/
+    ui-input/
+    ui-modal/
+
+  layout/
+    admin-layout/
+    client-layout/
+
+  pipes/
+    currency-br.pipe.ts

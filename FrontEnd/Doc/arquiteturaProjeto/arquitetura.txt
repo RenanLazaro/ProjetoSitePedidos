@@ -1,0 +1,16 @@
+Arquitetura do projeto
+
+Dentro da pasta do backend, teremos uma pasta exclusiva para o frontend.
+
+ProjetoDriptz/
+│
+├── Controllers/
+├── Models/
+├── Views/
+├── wwwroot/
+│
+├── frontend/
+│   └── sistema-de-pedido/
+│
+└── ProjetoDriptz.csproj
+

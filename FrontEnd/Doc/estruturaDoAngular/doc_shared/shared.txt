@@ -1,0 +1,12 @@
+📂 shared/
+Componentes reutilizáveis.
+
+Exemplos:
+Botão
+Input
+Tabela
+Modal
+Loading
+Card
+
+Se um componente será usado em várias telas, ele pertence ao shared.

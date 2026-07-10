@@ -1,0 +1,18 @@
+/* Isso remove qualquer margem ou comportamento de scroll no nível raiz */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Qwigley&display=swap');
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Isso mata o scroll definitivamente */
+  overscroll-behavior: none; /* Evita o "bounce" de rolagem no mobile */
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Garante que o container raiz da sua aplicação também ocupe tudo */
+#app, app-root, .root {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
