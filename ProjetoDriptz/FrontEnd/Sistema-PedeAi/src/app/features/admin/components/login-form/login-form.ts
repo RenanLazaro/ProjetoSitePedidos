@@ -17,20 +17,29 @@ export class LoginForm {
   usuario = '';
   senha = '';
 
+  carregando = false;
+
   modalAberto = false;
   tituloModal = '';
   mensagemModal = '';
 
-  logar(){
-if ( 
-  !this.empresa.trim() || 
-  !this.usuario.trim() || 
-  !this.senha.trim() ) { 
-    
-    this.tituloModal = 'Campos obrigatórios'; 
-    this.mensagemModal = 'Preencha todos os campos antes de continuar.'; 
-    this.modalAberto = true; 
-    return; } 
-    
-    console.log('Login realizado.'); }
+  logar() {
+    if(
+      !this.empresa.trim() ||
+      !this.usuario.trim() ||
+      !this.senha.trim()
+    ) {
+      this.tituloModal = 'Campos obrigatórios';
+      this.mensagemModal = 'Preencha todos os campos para continuar.';
+      this.modalAberto = true;
+      return;
+    }
+
+    this.carregando = true;
+
+    setTimeout(() => {
+      this.carregando = false;
+      console.log('Login realizado com sucesso!');
+    }, 2000);
+  }
 }

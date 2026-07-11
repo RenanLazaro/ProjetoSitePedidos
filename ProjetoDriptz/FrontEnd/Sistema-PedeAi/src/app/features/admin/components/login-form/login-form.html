@@ -29,7 +29,7 @@
         </div>
       </div>
 
-      <button class="login-button" (click)="logar()">Entrar no Painel</button>
+      <button class="login-button" [disabled]="carregando" (click)="logar()"> {{ carregando ? 'Entrando...' : 'Entrar no Painel' }}</button>
       <app-modal [aberto]="modalAberto" [titulo]="tituloModal" [mensagem]="mensagemModal" (fechar)="modalAberto = false"> </app-modal>
     </div>
   </div>

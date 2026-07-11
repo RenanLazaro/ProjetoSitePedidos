@@ -3,32 +3,23 @@
 .modal-overlay {
   position: fixed;
   inset: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: rgba(0, 0, 0, 0.45);
-
   z-index: 999;
 }
 
 /* Caixa branca */
 .modal {
-  width: 400px;
+  width: 300px;
   max-width: 90%;
-
-  background: #ffffff;
-
+  background: #eeeded;
   border-radius: 12px;
-
   padding: 30px;
-
   text-align: center;
-
   box-shadow: 0 15px 40px rgba(0, 0, 0, .25);
-
-  animation: aparecer .25s ease;
+  animation: aparecer .15s ease;
 }
 
 /* Ícone */
@@ -45,7 +36,7 @@
 
 /* Mensagem */
 .modal p {
-  color: #666;
+  color: #8f8c8c;
   margin-bottom: 25px;
   line-height: 1.5;
 }
@@ -53,21 +44,13 @@
 /* Botão */
 .btn-fechar {
   width: 100%;
-
   border: none;
-
-  background: #ff7b00;
-
+  background: #d95832;
   color: white;
-
   padding: 14px;
-
   border-radius: 8px;
-
   cursor: pointer;
-
   font-size: 15px;
-
   transition: .2s;
 }
 
