@@ -1,0 +1,26 @@
+@if (aberto) {
+
+<div class="modal-overlay" (click)="fecharModal()">
+
+  <div class="modal" (click)="$event.stopPropagation()">
+
+    <div class="modal-icon">
+      ⚠️
+    </div>
+
+    <h2>{{ titulo }}</h2>
+
+    <p>{{ mensagem }}</p>
+
+    <button
+      class="btn-fechar"
+      (click)="fecharModal()">
+      Fechar
+    </button>
+
+  </div>
+
+</div>
+
+}
+
