@@ -3,13 +3,14 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "rootDir": "./src",
     "outDir": "./out-tsc/spec",
     "types": [
       "vitest/globals"
     ]
   },
   "include": [
-    "src/**/*.d.ts",
-    "src/**/*.spec.ts"
-, "src/app/features/admin/pages/login-page-admin/login-page.spec-admin.ts"  ]
+    "src/**/*.spec.ts",
+    "src/**/*.d.ts"
+  ]
 }
