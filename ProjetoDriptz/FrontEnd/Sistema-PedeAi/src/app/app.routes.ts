@@ -15,6 +15,13 @@ import { CarrinhoPage } from './features/client/pages/carrinho-page/carrinho-pag
 import { CheckoutPage } from './features/client/pages/checkout-page/checkout-page';
 
 export const routes: Routes = [
+
+  {
+    path:'admin/cadastroDev',
+    loadComponent: () => import('./features/admin/admin-cadastro-empresa/admin-cadastro-empresa')
+      .then(m => m.AdminCadastroEmpresa),
+  },
+
     //Rotas do Admin
     {
         path: 'admin/login',

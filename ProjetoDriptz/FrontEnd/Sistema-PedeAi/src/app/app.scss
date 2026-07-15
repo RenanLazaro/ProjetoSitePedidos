@@ -4,8 +4,6 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow: hidden; /* Isso mata o scroll definitivamente */
   overscroll-behavior: none; /* Evita o "bounce" de rolagem no mobile */
   font-family: 'Quicksand', sans-serif;
 }

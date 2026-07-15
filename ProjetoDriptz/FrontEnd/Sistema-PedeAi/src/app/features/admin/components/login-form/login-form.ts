@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {Modal} from '../../../../shared/components/modal/modal';
+import { AuthService } from '../../services/auth.service';
+import {LoginRequest} from "../../models/login-request.model";
 
 @Component({
   selector: 'app-login-form',
@@ -12,6 +14,8 @@ import {Modal} from '../../../../shared/components/modal/modal';
   styleUrl: './login-form.scss',
 })
 export class LoginForm {
+
+  constructor(private authService: AuthService) {}
 
   empresa = '';
   usuario = '';
@@ -37,9 +41,12 @@ export class LoginForm {
 
     this.carregando = true;
 
-    setTimeout(() => {
-      this.carregando = false;
-      console.log('Login realizado com sucesso!');
-    }, 2000);
+    const login: LoginRequest = {
+      empresa: this.empresa,
+      usuario: this.usuario,
+      senha: this.senha
+    };
+    this.authService.login(login);
+    this.carregando = false;
   }
 }

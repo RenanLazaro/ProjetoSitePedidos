@@ -1,0 +1,45 @@
+<div class="admin-cadastro">
+  <div class="admin-cadastro__card">
+    <div class="logo-container"><img src="logo.png" class="logo-img"></div>
+    <h2 class="admin-cadastro__title">Cadastro e Cobrança</h2>
+
+    <form [formGroup]="empresaForm" (ngSubmit)="onSubmit()">
+      <div class="grid-form">
+        <div class="admin-cadastro__field">
+          <label>TIPO</label>
+          <select formControlName="tipoDoc" class="admin-cadastro__input">
+            <option value="cnpj">CNPJ</option>
+            <option value="cpf">CPF</option>
+          </select>
+        </div>
+        <div class="admin-cadastro__field">
+          <label>DOCUMENTO</label>
+          <div class="input-group">
+            <input formControlName="documento" class="admin-cadastro__input" placeholder="00.000.000/0000-00">
+            <button type="button" class="btn-lupa" (click)="buscarDoc()">🔍</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="admin-cadastro__field"><label>NOME / RAZÃO SOCIAL</label><input formControlName="nome" class="admin-cadastro__input" placeholder="Nome da empresa"></div>
+      
+      <div class="grid-form">
+        <div class="admin-cadastro__field"><label>MENSALIDADE</label><input formControlName="mensalidade" (input)="formatarMoeda($event)" class="admin-cadastro__input" placeholder="R$ 0,00"></div>
+        <div class="admin-cadastro__field"><label>VENCIMENTO</label><input formControlName="dataVencimento" type="date" class="admin-cadastro__input"></div>
+      </div>
+
+      <div class="admin-cadastro__field"><label>CELULAR (WHATSAPP)</label><input formControlName="celular" (input)="formatarTelefone($event)" class="admin-cadastro__input" placeholder="(00) 00000-0000"></div>
+
+      <div class="admin-cadastro__field">
+        <label><input type="checkbox" formControlName="cobrancaAutomatica"> Habilitar Cobrança Automática</label>
+      </div>
+
+      <div class="admin-cadastro__field" *ngIf="empresaForm.get('cobrancaAutomatica')?.value">
+        <label>MENSAGEM DE COBRANÇA</label>
+        <textarea formControlName="mensagemCobranca" class="admin-cadastro__input" rows="2" placeholder="Ex: Olá, sua fatura vence hoje..."></textarea>
+      </div>
+
+      <button type="submit" class="admin-cadastro__submit">Salvar Cadastro</button>
+    </form>
+  </div>
+</div>
